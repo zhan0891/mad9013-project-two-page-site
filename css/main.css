@@ -271,3 +271,76 @@ a:focus {
     width: 100%;
   }
 }
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 0.875rem 2rem;
+  background-color: var(--brand-accent);
+  color: var(--text-white);
+  font-weight: 700;
+  border-radius: var(--border-radius-md);
+  transition: background-color var(--transition-speed), transform 0.2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.9375rem;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: var(--brand-accent-dark);
+  color: var(--text-white);
+  transform: translateY(-2px);
+}
+
+/* Banner */
+.banner {
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image:
+    linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
+    url('../images/hero-banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: var(--spacing-xl) var(--container-padding);
+}
+
+.banner--large {
+  min-height: 500px;
+}
+
+.banner__content {
+  max-width: 50rem;
+  text-align: center;
+  color: var(--text-white);
+}
+
+.banner__content h1 {
+  color: var(--text-white);
+  margin-bottom: var(--spacing-md);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.banner__content p {
+  font-size: 1.125rem;
+  margin-bottom: var(--spacing-lg);
+  color: var(--text-white);
+  line-height: 1.7;
+}
+
+@media (min-width: 48rem) {
+  .banner {
+    min-height: 500px;
+  }
+
+  .banner--large {
+    min-height: 600px;
+  }
+
+  .banner__content p {
+    font-size: 1.25rem;
+  }
+}
